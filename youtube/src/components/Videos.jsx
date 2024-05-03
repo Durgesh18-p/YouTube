@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { Stack, Box } from "@mui/material";
-
+import { Loader } from "./index.js";
 import { ChannelCard, VideoCard } from "./index.js";
 
 const Videos = ({ videos, direction }) => {
-  // if (!videos?.length) return <Loader />;
+  if (!videos?.length) return <Loader />;
 
   return (
     <Stack
@@ -14,10 +14,10 @@ const Videos = ({ videos, direction }) => {
       alignItems="start"
       gap={2}
     >
-      {videos.map((item, idx) => (
+      {videos?.map((item, idx) => (
         <Box key={idx}>
           {item.id.videoId && <VideoCard video={item} />}
-          {/* {item.id.channelId && <ChannelCard channelDetail={item} />} */}
+          {item.id.channelId && <ChannelCard channelDetail={item} />}
         </Box>
       ))}
     </Stack>

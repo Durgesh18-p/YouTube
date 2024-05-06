@@ -49,6 +49,17 @@ const Login = ({
     >
       <Container component="main" maxWidth="xs">
         <div className={classes.container}>
+          <Typography varient="h1">
+            Welcome to{" "}
+            <span
+              style={{
+                color: "#ffc3a0",
+                fontSize: "1.5rem",
+              }}
+            >
+              ContentHub
+            </span>
+          </Typography>
           <Avatar className={classes.avatar}>
             <LockOpenIcon />
           </Avatar>
